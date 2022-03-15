@@ -1,0 +1,81 @@
+@import "../../../variables.scss";
+
+nav {
+    .bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 150px;
+
+        border-right: 1px solid $grey-light;
+
+        .burger {
+            display: block;
+            padding: 60px;
+            transition: padding 0.3s;
+
+            div {
+                width: 100%;
+                margin: 4px 0;
+                height: 3px;
+                background-color: $primary-light;
+                transition: background-color 0.3s, margin 0.3s, height 0.3s;
+            }
+
+            &:hover {
+                div {
+                    background-color: $primary;
+                }
+            }
+
+            &.active {
+                padding: 73px 60px;
+                div {
+                    margin: 0;
+                    height: 1px;
+                }
+            }
+        }
+
+        h1 {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            
+            
+            width: 50vh;
+
+            transform-origin: left center;
+            transform: rotate(-90deg);
+
+            font-family: "Roboto";
+            letter-spacing: 15px;
+            font-size: 3vh;
+            color: $primary;
+        }
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        left: 150px;
+
+        overflow: hidden;
+        transition: right 0.7s;
+        transition-timing-function:ease;
+
+        background-color: $primary-light;
+        color: white;
+
+        &.active {
+            right: 0;
+        }
+
+        div {
+            padding: 20px;
+        }
+    }
+}

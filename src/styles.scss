@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap');
+
+@import "variables.scss";
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Bebas Neue";
+}
+
+@for $i from 1 through 6 {
+    h#{$i}{
+        font-size: 100px - (($i+2)*10);
+        margin: (40px - $i*5) 0;
+    }
+}
