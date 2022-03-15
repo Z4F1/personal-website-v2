@@ -1,19 +1,19 @@
-<nav>
+<nav [class.active]="isActive">
     <div class="bar">
-        <a [routerLink]="[]" (click)="click()" class="burger" [class.active]="isActive">
+        <a [routerLink]="[]" (click)="click()" class="burger">
             <div></div>
             <div></div>
             <div></div>
         </a>
         <h1>FLOATING GOAT</h1>
     </div>
-    <div class="menu" [class.active]="isActive">
+    <div class="menu">
         <div>
-            <h1>Hi</h1>
-            <h2>Hi</h2>
-            <h4>Hi</h4>
-            <h5>Hi</h5>
-            <h6>Hi</h6>
+            <h1>MENU</h1>
+            <a [routerLink]="['/home']"><h3>HOME</h3></a>
+            <a [routerLink]="['/home']"><h3>PROJECTS</h3></a>
+            <a [routerLink]="['/home']"><h3>PHOTOGRAPHY</h3></a>
+            <a [routerLink]="['/home']"><h3>BLOG</h3></a>
         </div>
     </div>
 </nav>

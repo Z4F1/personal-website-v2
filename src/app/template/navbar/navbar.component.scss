@@ -28,14 +28,6 @@ nav {
                     background-color: $primary;
                 }
             }
-
-            &.active {
-                padding: 73px 60px;
-                div {
-                    margin: 0;
-                    height: 1px;
-                }
-            }
         }
 
         h1 {
@@ -53,29 +45,54 @@ nav {
             letter-spacing: 15px;
             font-size: 3vh;
             color: $primary;
+
+            transition: color;
         }
+
+        transition: background-color 0.3s;
     }
 
     .menu {
         position: fixed;
         top: 0;
         bottom: 0;
-        right: 100%;
-        left: 150px;
+        left: 100%;
+        width: calc(100vw - 150px);
 
         overflow: hidden;
-        transition: right 0.7s;
+        transition: left 0.5s;
         transition-timing-function:ease;
 
         background-color: $primary-light;
         color: white;
 
-        &.active {
-            right: 0;
+        div {
+            padding: 50px 100px;
+        }
+    }
+
+    &.active {
+        .bar {
+            .burger {
+                padding: 73px 60px;
+                div {
+                    margin: 0;
+                    height: 1px;
+                    background-color: $secondary;
+                }
+    
+            }
+            background-color: $primary-light;
+
+            border-right: 0;
+
+            h1 {
+                color: $grey-light;
+            }
         }
 
-        div {
-            padding: 20px;
+        .menu {
+            left: 150px;
         }
     }
 }

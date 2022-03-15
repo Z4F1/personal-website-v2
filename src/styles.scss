@@ -3,6 +3,10 @@
 
 @import "variables.scss";
 
+* {
+    box-sizing: border-box;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: "Bebas Neue";
 }
@@ -12,4 +16,24 @@ h1,h2,h3,h4,h5,h6 {
         font-size: 100px - (($i+2)*10);
         margin: (40px - $i*5) 0;
     }
+}
+
+p {
+    font-family: "Roboto";
+    color: $default-text;
+    font-size: 1.2em;
+}
+
+a {
+    color: $primary;
+    font-family: "Roboto";
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: $secondary;
+}
+
+.content {
+    margin-left: 150px;
 }
