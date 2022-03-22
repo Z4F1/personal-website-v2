@@ -47,6 +47,7 @@ section {
     @for $i from 1 through 6 {
         h#{$i}{
             color: $primary;
+            text-align: center;
         }
     }
 
@@ -79,4 +80,8 @@ section {
 
 .right {
     text-align: right;
+}
+
+.left {
+    text-align: left;
 }
