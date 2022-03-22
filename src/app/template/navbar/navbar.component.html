@@ -1,4 +1,4 @@
-<nav [class.active]="isActive">
+<nav [class.active]="isActive" #navbar>
     <div class="bar">
         <a [routerLink]="[]" (click)="menuActivation()" class="burger">
             <div></div>
@@ -10,11 +10,11 @@
     <div class="menu">
         <div>
             <h1>MENU</h1>
-            <a [routerLink]="['/home']"><h4>HOME</h4></a>
-            <a [routerLink]="['/about']"><h4>ABOUT</h4></a>
-            <a [routerLink]="['/home']"><h4>PROJECTS</h4></a>
-            <a [routerLink]="['/home']"><h4>PHOTOGRAPHY</h4></a>
-            <a [routerLink]="['/home']"><h4>BLOG</h4></a>
+            <a [routerLink]="['/']" (click)="menuActivation()"><h4>HOME</h4></a>
+            <a [routerLink]="['/about']" (click)="menuActivation()"><h4>ABOUT</h4></a>
+            <a [routerLink]="['/home']" (click)="menuActivation()"><h4>PROJECTS</h4></a>
+            <a [routerLink]="['/home']" (click)="menuActivation()"><h4>PHOTOGRAPHY</h4></a>
+            <a [routerLink]="['/home']" (click)="menuActivation()"><h4>BLOG</h4></a>
         </div>
     </div>
 </nav>
