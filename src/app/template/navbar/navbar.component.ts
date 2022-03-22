@@ -11,9 +11,7 @@ export class NavbarComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit(): void {
-
-    }
+    ngOnInit() {}
 
     menuActivation() {
         this.isActive = !this.isActive;
