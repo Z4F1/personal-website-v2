@@ -42,7 +42,7 @@ a:hover {
 
 section {
     margin-left: 150px;
-    padding: 150px 100px;
+    padding: 150px 13vw;
 
     @for $i from 1 through 6 {
         h#{$i}{
