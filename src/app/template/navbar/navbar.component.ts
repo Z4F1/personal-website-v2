@@ -12,9 +12,10 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
-  click() {
+  menuActivation() {
     this.isActive = !this.isActive;
   }
 

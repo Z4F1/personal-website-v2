@@ -1,6 +1,6 @@
 <nav [class.active]="isActive">
     <div class="bar">
-        <a [routerLink]="[]" (click)="click()" class="burger">
+        <a [routerLink]="[]" (click)="menuActivation()" class="burger">
             <div></div>
             <div></div>
             <div></div>
@@ -10,11 +10,11 @@
     <div class="menu">
         <div>
             <h1>MENU</h1>
-            <a [routerLink]="['/home']"><h3>HOME</h3></a>
-            <a [routerLink]="['/about']"><h3>ABOUT</h3></a>
-            <a [routerLink]="['/home']"><h3>PROJECTS</h3></a>
-            <a [routerLink]="['/home']"><h3>PHOTOGRAPHY</h3></a>
-            <a [routerLink]="['/home']"><h3>BLOG</h3></a>
+            <a [routerLink]="['/home']"><h4>HOME</h4></a>
+            <a [routerLink]="['/about']"><h4>ABOUT</h4></a>
+            <a [routerLink]="['/home']"><h4>PROJECTS</h4></a>
+            <a [routerLink]="['/home']"><h4>PHOTOGRAPHY</h4></a>
+            <a [routerLink]="['/home']"><h4>BLOG</h4></a>
         </div>
     </div>
 </nav>
