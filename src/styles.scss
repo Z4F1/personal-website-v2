@@ -11,21 +11,23 @@ body {
     margin: 0;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Bebas Neue";
-}
-
 @for $i from 1 through 6 {
     h#{$i}{
-        font-size: 100px - (($i+2)*10);
+        font-size: 120px - (($i+2)*10);
         margin: (40px - $i*5) 0;
+        font-family: "Bebas Neue";
+
+        span {
+            text-decoration: underline;
+            color: $secondary
+        }
     }
 }
 
 p {
     font-family: "Roboto";
     color: $default-text;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 a {
@@ -40,12 +42,41 @@ a:hover {
 
 section {
     margin-left: 150px;
-    padding: 10px 50px;
+    padding: 150px 100px;
 
     @for $i from 1 through 6 {
         h#{$i}{
-            letter-spacing: 20px;
             color: $primary;
         }
     }
+
+    &.fill-view {
+        min-height: 100vh;
+    }
+
+    &.colored {
+        background-color: $secondary-light;
+
+        p {
+            color: $primary-light !important;
+        }
+    }
+
+    &.dark {
+        background-color: $primary-dark;
+
+        p {
+            color: $primary-light !important;
+        }
+
+        @for $i from 1 through 6 {
+            h#{$i}{
+                color: white;
+            }
+        }
+    }
+}
+
+.right {
+    text-align: right;
 }
