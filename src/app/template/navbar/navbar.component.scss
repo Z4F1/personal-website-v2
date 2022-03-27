@@ -49,7 +49,7 @@ nav {
             transition: color;
         }
 
-        transition: background-color 0.3s;
+        transition: background-color 0.5s;
     }
 
     .menu {
@@ -78,9 +78,14 @@ nav {
                 div {
                     margin: 0;
                     height: 1px;
-                    background-color: $secondary;
+                    background-color: $primary;
                 }
-    
+
+                &:hover {
+                    div {
+                        background-color: $secondary;
+                    }
+                }
             }
             background-color: $primary-light;
 

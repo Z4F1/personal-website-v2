@@ -42,13 +42,21 @@ a:hover {
 
 section {
     margin-left: 150px;
-    padding: 150px 13vw;
+    padding: 150px 20vw;
 
     @for $i from 1 through 6 {
         h#{$i}{
             color: $primary;
             text-align: center;
         }
+    }
+
+    &.large {
+        padding: 150px 10vw;
+    }
+
+    &.small {
+        padding: 150px 30vw;
     }
 
     &.fill-view {
@@ -79,9 +87,22 @@ section {
 }
 
 .right {
-    text-align: right;
+    * {
+        text-align: right;
+    }
+    text-align: right !important;
 }
 
 .left {
-    text-align: left;
+    * {
+        text-align: left;
+    }
+    text-align: left !important;
+}
+
+.center {
+    * {
+        text-align: center;
+    }
+    text-align: center !important;
 }
