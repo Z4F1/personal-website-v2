@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300&display=swap');
 
 @import "variables.scss";
+@import "animations.scss";
 
 * {
     box-sizing: border-box;
@@ -9,6 +10,7 @@
 
 body {
     margin: 0;
+    font-family: "Roboto";
 }
 
 @for $i from 1 through 6 {
@@ -25,19 +27,17 @@ body {
 }
 
 p {
-    font-family: "Roboto";
     color: $default-text;
     font-size: 1.4em;
 }
 
 a {
     color: $primary;
-    font-family: "Roboto";
     transition: color 0.3s;
-}
 
-a:hover {
-    color: $secondary;
+    &:hover {
+        color: $secondary;
+    }
 }
 
 section {
@@ -88,6 +88,63 @@ section {
             }
         }
     }
+
+    .background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        
+        overflow: hidden;
+    
+        .search-light {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: rgba($color: #fff, $alpha: 0.1);
+    
+            border-radius: 100%;
+    
+            animation-name: search;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+input {
+    margin: 5px;
+    padding: 20px 30px;
+
+    border: 0;
+    outline: none;
+
+    font-family: "Roboto";
+    font-size: 1.4em;
+
+    transition: color 0.3s;
+
+    &[type=text],&[type=search],&[type=password]{
+        width: 400px;
+        background-color: $primary-light;
+        color: white;
+    }
+
+    &[type=button],&[type=submit]{
+        background-color: transparent;
+        color: $secondary;
+        text-transform: uppercase;
+
+        cursor: pointer;
+
+        &:hover {
+            color: $primary-light;
+        }
+    }
+
+    
 }
 
 .right {
@@ -110,3 +167,4 @@ section {
     }
     text-align: center !important;
 }
+
