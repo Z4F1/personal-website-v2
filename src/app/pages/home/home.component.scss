@@ -1,0 +1,41 @@
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    
+    overflow: hidden;
+
+    .blob {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-color: rgba($color: #fff, $alpha: 0.1);
+
+        border-radius: 100%;
+
+        animation-name: swirl;
+        animation-duration: 4s;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+    }
+}
+
+
+@keyframes swirl {
+    from {
+        top: 100px;
+        left: 200px;
+        width: 500px;
+        height: 500px;
+    }
+
+    to {
+        top: 100px;
+        left: 400px;
+        width: 600px;
+        height: 600px;
+    }
+}
