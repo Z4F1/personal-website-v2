@@ -29,6 +29,11 @@ body {
 p {
     color: $default-text;
     font-size: 1.4em;
+    margin: 15px auto;
+
+    span {
+        text-decoration: line-through;
+    }
 }
 
 a {
@@ -53,6 +58,11 @@ section {
             color: $primary;
             text-align: center;
         }
+    }
+
+    &.no-top-bottom {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
     }
 
     &.large {
@@ -168,3 +178,15 @@ input {
     text-align: center !important;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+
+    > {
+        margin: 0 20px;
+    }
+    
+    .flex-fill {
+        flex-grow: 1;
+    }
+}
