@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +6,6 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    title = 'Floating Goat';
 
     constructor(){}
 
@@ -17,6 +15,6 @@ export class AppComponent implements OnInit {
     }
 
     titleFocus(){
-        document.title = document.hasFocus() ? "Floating Goat" : "Come back, you filthy bastard!"
+        document.title = document.hasFocus() ? "Floating Goat" : "Come back, you filthy bastard!";
     }
 }
